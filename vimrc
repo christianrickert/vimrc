@@ -1,10 +1,7 @@
 " Vi IMproved 9.1 - vimrc file
 " Christian Rickert (2024-08-17)
 
-"===============================================================================
-"                                    Plugins
-"===============================================================================
-
+" Plugins {{{1
 " Use VIM settings exclusively
 set nocompatible
 
@@ -59,26 +56,19 @@ call plug#end()
 " Executed automatically after vim-plug
 filetype plugin indent on
 syntax enable
+"}}}
 
-"===============================================================================
-"                                    Settings
-"===============================================================================
+" Plugin Variables {{{1
+let g:netrw_banner=0  " `netrw`: suppress the banner
+let g:netrw_browse_split=3  " `netrw`: open file in new tab
+" }}}
 
-" Color scheme
-colorscheme firefly
-
-" Custom fonts
-if has("gui_running")
-  set guifont=FiraCode-Retina:h13
-  set macligatures
-endif
-set encoding=utf-8
-
-" Global variables
+" Global Variables {{{1
 set autoindent  " copy indent from current line when starting a new line
 set cmdheight=2  " number of screen lines to use for the command-line
 set completeopt=menuone,noinsert,popup  " set options for Insert mode completion
 set hlsearch  " with a previous search pattern, highlight all its matches
+set foldmethod=syntax  " syntax highlighting is used to specify folding levels
 set nowrap  " lines longer than the width of the window will not wrap
 set number  " precede each line with its line number
 set omnifunc=syntaxcomplete#Complete  " set function for Insert mode omni completion
@@ -90,7 +80,16 @@ set tags+=./tags;/  " add tags file in current directoy to label jump list
 set updatetime=1000  " update swap file after waiting this many milliseconds
 set wildmenu  " operate command-line completion in an enhanced mode
 set wildoptions=pum  " show completion matches in popup menu
+" }}}
 
-" Plugin variables
-let g:netrw_banner=0  " `netrw`: suppress the banner
-let g:netrw_browse_split=3  " `netrw`: open file in new tab
+" Color Scheme {{{1
+colorscheme firefly
+" }}}
+
+" Font Settings {{{1
+if has("gui_running")
+  set guifont=FiraCode-Retina:h13
+  set macligatures
+endif
+set encoding=utf-8
+" }}}
