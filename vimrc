@@ -43,13 +43,6 @@ Plug 'lifepillar/vim-colortemplate'
 " Gutentags
 Plug 'ludovicchabant/vim-gutentags'
 
-" A collection of language packs for Vim
-let g:polyglot_disabled=['sensible']
-Plug 'sheerun/vim-polyglot'
-
-let g:polyglot_disabled = ['sensible']
-Plug 'sheerun/vim-polyglot'
-
 " Initialize plugin system
 call plug#end()
 
