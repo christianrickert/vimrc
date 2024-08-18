@@ -61,7 +61,7 @@ set autoindent  " copy indent from current line when starting a new line
 set cmdheight=2  " number of screen lines to use for the command-line
 set completeopt=menuone,noinsert,popup  " set options for Insert mode completion
 set hlsearch  " with a previous search pattern, highlight all its matches
-set foldmethod=syntax  " syntax highlighting is used to specify folding levels
+set foldmethod=indent  " fold lines with equal indent
 set nowrap  " lines longer than the width of the window will not wrap
 set number  " precede each line with its line number
 set omnifunc=syntaxcomplete#Complete  " set function for Insert mode omni completion
@@ -82,7 +82,7 @@ colorscheme firefly
 " Font Settings {{{1
 if has("gui_running")
   set guifont=FiraCode-Retina:h13  " set font and size
-  set macligatures  " display ligatures in :macOS GUI version of Vim 
+  set macligatures  " display ligatures in :macOS GUI version of Vim
 endif
-set encoding=utf-8  " set character encoding to `utf-8` 
+set encoding=utf-8  " set character encoding to `utf-8`
 " }}}
