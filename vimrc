@@ -81,8 +81,8 @@ colorscheme firefly
 
 " Font Settings {{{1
 if has("gui_running")
-  set guifont=FiraCode-Retina:h13
-  set macligatures
+  set guifont=FiraCode-Retina:h13  " set font and size
+  set macligatures  " display ligatures in :macOS GUI version of Vim 
 endif
-set encoding=utf-8
+set encoding=utf-8  " set character encoding to `utf-8` 
 " }}}
