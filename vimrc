@@ -1,5 +1,5 @@
 " Vi IMproved 9.1 - vimrc file
-" Christian Rickert (2024-08-17)
+" Christian Rickert (2024-08-18)
 
 " Plugins {{{1
 " Use VIM settings exclusively
@@ -47,8 +47,8 @@ Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 " Executed automatically after vim-plug
-filetype plugin indent on
-syntax enable
+filetype plugin indent on  " enable filetype detection and indentation
+syntax enable  " enable syntax highlighting with custom color settings
 "}}}
 
 " Plugin Variables {{{1
