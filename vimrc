@@ -74,7 +74,7 @@ if has("gui_running")
 endif
 set encoding=utf-8
 
-" Manual variables
+" Global variables
 set autoindent  " copy indent from current line when starting a new line
 set cmdheight=2  " number of screen lines to use for the command-line
 set completeopt=menuone,noinsert,popup  " set options for Insert mode completion
@@ -90,3 +90,7 @@ set tags+=./tags;/  " add tags file in current directoy to label jump list
 set updatetime=1000  " update swap file after waiting this many milliseconds
 set wildmenu  " operate command-line completion in an enhanced mode
 set wildoptions=pum  " show completion matches in popup menu
+
+" Plugin variables
+let g:netrw_banner=0  " `netrw`: suppress the banner
+let g:netrw_browse_split=3  " `netrw`: open file in new tab
