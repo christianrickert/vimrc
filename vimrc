@@ -1,5 +1,5 @@
 " Vi IMproved 9.1 - vimrc file
-" Christian Rickert (2024-08-18)
+" Christian Rickert (2024-12-22)
 
 " Plugins {{{1
 " Use VIM settings exclusively
@@ -67,7 +67,7 @@ set number  " precede each line with its line number
 set omnifunc=syntaxcomplete#Complete  " set function for Insert mode omni completion
 set path+=**  " add recursive downwards search to list of directories
 set relativenumber  " show the line number relative to the line with the cursor
-set scrolloff=99  " minimal number of screen lines to keep above and below cursor
+set scrolloff=9  " minimal number of screen lines to keep above and below cursor
 set showcmd  " show (partial) command in the last line of the screen
 set showmatch  " when a bracket is inserted, briefly jump to the matching one
 set tags+=./tags;/  " add tags file in current directoy to label jump list
@@ -82,7 +82,7 @@ colorscheme firefly
 
 " Font Settings {{{1
 if has("gui_running")
-  set guifont=FiraCode-Retina:h13  " set font and size
+  set guifont=FiraCode-Regular:h13  " set font and size
   set macligatures  " display ligatures in :macOS GUI version of Vim
 endif
 set encoding=utf-8  " set character encoding to `utf-8`
