@@ -15,6 +15,7 @@ Plug 'christianrickert/vim-firefly'
 let g:ale_fix_on_save=1  " fix files when they are saved
 let g:ale_hover_cursor=0  " don't display information in the echo line
 let g:ale_linters_explicit = 1  " only run linters explicitly named in list
+let g:ale_sign_column_always = 1  " open sign gutter (column) by default
 let g:ale_set_balloons=0  " don't display balloon messages or hover information
 let g:ale_virtualtext_cursor=0  " don't show problems with virtual-text
 let g:ale_fixers={
