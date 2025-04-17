@@ -1,7 +1,7 @@
 " Vi IMproved 9.1 - vimrc file
-" Christian Rickert (2024-12-22)
+" Christian Rickert (2025-04-17)
 
-" Plugins {{{1
+" Plugins
 " Use VIM settings exclusively
 set nocompatible
 
@@ -14,28 +14,21 @@ Plug 'christianrickert/vim-firefly'
 " ALE (Asynchronous Lint Engine) plugin providing linting
 let g:ale_fix_on_save=1  " fix files when they are saved
 let g:ale_hover_cursor=0  " don't display information in the echo line
+let g:ale_linters_explicit = 1  " only run linters explicitly named in list
 let g:ale_set_balloons=0  " don't display balloon messages or hover information
-let g:ale_set_highlights=0  " don't set highlights for problems
 let g:ale_virtualtext_cursor=0  " don't show problems with virtual-text
 let g:ale_fixers={
-\	'*': ['remove_trailing_lines', 'trim_whitespace'],
-\	'go': ['gofmt'],
-\	'python': ['ruff_format'],
-\	'r': ['styler'],
-\	'rust': ['rustfmt'],
-\}
+	\	'*': ['remove_trailing_lines', 'trim_whitespace'],
+	\	'python': ['ruff_format'],
+	\	'r': ['styler'],
+	\	'rust': ['rustfmt'],
+	\}
 let g:ale_linters={
-\	'go': ['staticcheck'],
-\	'python': ['ruff'],
-\	'r': ['lintr'],
-\	'rust': ['analyzer'],
-\}
+	\	'python': ['ruff'],
+	\	'r': ['lintr'],
+	\	'rust': ['analyzer'],
+	\}
 Plug 'dense-analysis/ale'
-
-" A light and configurable statusline/tabline plugin for Vim
-set laststatus=2  " always show a status line
-set noshowmode  " don't show Insert, Replace, or Visual mode message
-Plug 'itchyny/lightline.vim'
 
 " The Toolkit for Vim Color Scheme Designers!
 Plug 'lifepillar/vim-colortemplate'
@@ -49,16 +42,14 @@ call plug#end()
 " Executed automatically after vim-plug
 filetype plugin indent on  " enable filetype detection and indentation
 syntax enable  " enable syntax highlighting with custom color settings
-"}}}
 
-" Plugin Variables {{{1
+" Plugin Variables
 let g:netrw_banner=0  " `netrw`: suppress the banner
 let g:netrw_browse_split=3  " `netrw`: open file in new tab
-" }}}
 
-" Global Variables {{{1
+" Global Variables
 set autoindent  " copy indent from current line when starting a new line
-set cmdheight=2  " number of screen lines to use for the command-line
+set cmdheight=1  " number of screen lines to use for the command-line
 set completeopt=menuone,noinsert,popup  " set options for Insert mode completion
 set hlsearch  " with a previous search pattern, highlight all its matches
 set foldmethod=indent  " fold lines with equal indent
@@ -67,23 +58,20 @@ set number  " precede each line with its line number
 set omnifunc=syntaxcomplete#Complete  " set function for Insert mode omni completion
 set path+=**  " add recursive downwards search to list of directories
 set relativenumber  " show the line number relative to the line with the cursor
-set scrolloff=9  " minimal number of screen lines to keep above and below cursor
+set scrolloff=99  " minimal number of screen lines to keep above and below cursor
 set showcmd  " show (partial) command in the last line of the screen
 set showmatch  " when a bracket is inserted, briefly jump to the matching one
 set tags+=./tags;/  " add tags file in current directoy to label jump list
 set updatetime=1000  " update swap file after waiting this many milliseconds
 set wildmenu  " operate command-line completion in an enhanced mode
 set wildoptions=pum  " show completion matches in popup menu
-" }}}
 
-" Color Scheme {{{1
+" Color Scheme
 colorscheme firefly
-" }}}
 
-" Font Settings {{{1
+" Font Settings
 if has("gui_running")
   set guifont=FiraCode-Regular:h13  " set font and size
   set macligatures  " display ligatures in :macOS GUI version of Vim
 endif
 set encoding=utf-8  " set character encoding to `utf-8`
-" }}}
