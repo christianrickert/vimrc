@@ -1,5 +1,5 @@
 " Vi IMproved 9.1 - vimrc file
-" Christian Rickert (2025-04-17)
+" Christian Rickert (2025-04-18)
 
 " Plugins
 " Use VIM settings exclusively
@@ -37,6 +37,10 @@ Plug 'lifepillar/vim-colortemplate'
 " Gutentags
 Plug 'ludovicchabant/vim-gutentags'
 
+" A collection of language packs for Vim.
+let g:polyglot_disabled = ['sensible']  " disable Polyglot defaults
+Plug 'sheerun/vim-polyglot'
+
 " Initialize plugin system
 call plug#end()
 
@@ -59,7 +63,7 @@ set number  " precede each line with its line number
 set omnifunc=syntaxcomplete#Complete  " set function for Insert mode omni completion
 set path+=**  " add recursive downwards search to list of directories
 set relativenumber  " show the line number relative to the line with the cursor
-set scrolloff=99  " minimal number of screen lines to keep above and below cursor
+set scrolloff=9  " minimal number of screen lines to keep above and below cursor
 set showcmd  " show (partial) command in the last line of the screen
 set showmatch  " when a bracket is inserted, briefly jump to the matching one
 set tags+=./tags;/  " add tags file in current directoy to label jump list
