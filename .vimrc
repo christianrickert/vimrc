@@ -1,5 +1,5 @@
 " Vi IMproved 9.1 - vimrc file
-" Christian Rickert (2025-04-18)
+" Christian Rickert (2025-04-27)
 
 " Plugins
 " Use VIM settings exclusively
@@ -12,12 +12,15 @@ call plug#begin('$HOME/.vim/vim-plug')
 Plug 'christianrickert/vim-firefly'
 
 " ALE (Asynchronous Lint Engine) plugin providing linting
+let g:ale_echo_cursor=0  " do not echo message near cursor in status line
 let g:ale_fix_on_save=1  " fix files when they are saved
 let g:ale_hover_cursor=0  " don't display information in the echo line
-let g:ale_linters_explicit = 1  " only run linters explicitly named in list
-let g:ale_sign_column_always = 1  " open sign gutter (column) by default
+let g:ale_lint_delay=200  " delay in milliseconds after linters will run
+let g:ale_linters_explicit=1  " only run linters explicitly named in list
+let g:ale_lint_on_text_changed='always'  " always check buffers on changes
+let g:ale_sign_column_always=1  " open sign gutter (column) by default
 let g:ale_set_balloons=0  " don't display balloon messages or hover information
-let g:ale_virtualtext_cursor=0  " don't show problems with virtual-text
+let g:ale_virtualtext_cursor='all'  " show problems for all lines with virtualtext
 let g:ale_fixers={
 	\	'*': ['remove_trailing_lines', 'trim_whitespace'],
 	\	'python': ['ruff_format'],
@@ -65,9 +68,8 @@ set path+=**  " add recursive downwards search to list of directories
 set relativenumber  " show the line number relative to the line with the cursor
 set scrolloff=9  " minimal number of screen lines to keep above and below cursor
 set showcmd  " show (partial) command in the last line of the screen
-set showmatch  " when a bracket is inserted, briefly jump to the matching one
 set tags+=./tags;/  " add tags file in current directoy to label jump list
-set updatetime=1000  " update swap file after waiting this many milliseconds
+set updatetime=2000  " update swap file after waiting this many milliseconds
 set wildmenu  " operate command-line completion in an enhanced mode
 set wildoptions=pum  " show completion matches in popup menu
 
