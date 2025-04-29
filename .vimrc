@@ -50,12 +50,12 @@ call plug#end()
 filetype plugin indent on  " enable filetype detection and indentation
 syntax enable  " enable syntax highlighting with custom color settings
 
-" Plugin Variables
-let g:matchparen_disable_cursor_hl = 1  " do not highlight (blink) cursor panenthresis
+" Standard Plugin Variables
+let g:matchparen_disable_cursor_hl=1  " don't highlight (blink) cursor parenthesis
 let g:netrw_banner=0  " `netrw`: suppress the banner
 let g:netrw_browse_split=3  " `netrw`: open file in new tab
 
-" Global Variables
+" Global Program Variables
 set autoindent  " copy indent from current line when starting a new line
 set cmdheight=1  " number of screen lines to use for the command-line
 set completeopt=menuone,noinsert,popup  " set options for Insert mode completion
