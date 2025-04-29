@@ -1,5 +1,5 @@
 " Vi IMproved 9.1 - vimrc file
-" Christian Rickert (2025-04-27)
+" Christian Rickert (2025-04-28)
 
 " Plugins
 " Use VIM settings exclusively
@@ -15,7 +15,6 @@ Plug 'christianrickert/vim-firefly'
 let g:ale_echo_cursor=0  " do not echo message near cursor in status line
 let g:ale_fix_on_save=1  " fix files when they are saved
 let g:ale_hover_cursor=0  " don't display information in the echo line
-let g:ale_lint_delay=200  " delay in milliseconds after linters will run
 let g:ale_linters_explicit=1  " only run linters explicitly named in list
 let g:ale_lint_on_text_changed='always'  " always check buffers on changes
 let g:ale_sign_column_always=1  " open sign gutter (column) by default
@@ -52,6 +51,7 @@ filetype plugin indent on  " enable filetype detection and indentation
 syntax enable  " enable syntax highlighting with custom color settings
 
 " Plugin Variables
+let g:matchparen_disable_cursor_hl = 1  " do not highlight (blink) cursor panenthresis
 let g:netrw_banner=0  " `netrw`: suppress the banner
 let g:netrw_browse_split=3  " `netrw`: open file in new tab
 
