@@ -1,5 +1,5 @@
 " Vi IMproved 9.1 - vimrc file
-" Christian Rickert (2025-04-28)
+" Christian Rickert (2025-06-15)
 
 " Plugins
 " Use VIM settings exclusively
@@ -78,7 +78,7 @@ colorscheme firefly
 
 " Font Settings
 if has("gui_running")
-  set guifont=FiraCode-Regular:h13  " set font and size
-  set macligatures  " display ligatures in :macOS GUI version of Vim
+  set guifont=AtkinsonHyperlegibleMono-Medium:h13  " set font and size
+  set linespace=4  " number of pixel lines inserted between characters
 endif
 set encoding=utf-8  " set character encoding to `utf-8`
