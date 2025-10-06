@@ -1,5 +1,5 @@
 " Vi IMproved 9.1 - vimrc file
-" Christian Rickert (2025-06-15)
+" Christian Rickert (2025-10-06)
 
 " Plugins
 " Use VIM settings exclusively
@@ -22,11 +22,13 @@ let g:ale_set_balloons=0  " don't display balloon messages or hover information
 let g:ale_virtualtext_cursor='all'  " show problems for all lines with virtualtext
 let g:ale_fixers={
 	\	'*': ['remove_trailing_lines', 'trim_whitespace'],
+	\	'groovy': ['npm-groovy-lint'],
 	\	'python': ['ruff_format'],
 	\	'r': ['styler'],
 	\	'rust': ['rustfmt'],
 	\}
 let g:ale_linters={
+	\	'groovy': ['npm-groovy-lint'],
 	\	'python': ['ruff'],
 	\	'r': ['lintr'],
 	\	'rust': ['analyzer'],
