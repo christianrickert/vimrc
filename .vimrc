@@ -1,5 +1,5 @@
 " Vi IMproved 9.1 - vimrc file
-" Christian Rickert (2025-10-06)
+" Christian Rickert (2025-10-18)
 
 " Plugins
 " Use VIM settings exclusively
@@ -61,6 +61,7 @@ let g:netrw_browse_split=3  " `netrw`: open file in new tab
 set autoindent  " copy indent from current line when starting a new line
 set cmdheight=1  " number of screen lines to use for the command-line
 set completeopt=menuone,noinsert,popup  " set options for Insert mode completion
+set guicursor+=n-v:blinkon0  " set cursor block to non-blinking
 set hlsearch  " with a previous search pattern, highlight all its matches
 set foldmethod=indent  " fold lines with equal indent
 set nowrap  " lines longer than the width of the window will not wrap
