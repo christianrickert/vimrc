@@ -1,5 +1,5 @@
-" Vi IMproved 9.1 - vimrc file
-" Christian Rickert (2025-10-19)
+" Vi IMproved 9.2 - vimrc file
+" Christian Rickert (2026-05-17)
 
 " Plugins
 " Use VIM settings exclusively
@@ -29,7 +29,7 @@ let g:ale_fixers={
 	\}
 let g:ale_linters={
 	\	'groovy': ['npm-groovy-lint'],
-	\	'python': ['ruff'],
+	\	'python': ['ty'],
 	\	'r': ['lintr'],
 	\	'rust': ['analyzer'],
 	\}
