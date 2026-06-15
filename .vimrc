@@ -1,5 +1,5 @@
 " Vi IMproved 9.2 - vimrc file
-" Christian Rickert (2026-05-17)
+" Christian Rickert (2026-06-15)
 
 " Plugins
 " Use VIM settings exclusively
@@ -56,6 +56,7 @@ let g:netrw_browse_split=3  " `netrw`: open file in new tab
 
 " Global Program Variables
 set autoindent  " copy indent from current line when starting a new line
+set autoread " automatically read file upon changes, keep when deleted
 set cmdheight=1  " number of screen lines to use for the command-line
 set completeopt=menuone,noinsert,popup  " set options for Insert mode completion
 set guicursor+=n-v:blinkon0  " set block cursor to non-blinking in Normal and Visual
