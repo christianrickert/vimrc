@@ -1,5 +1,5 @@
 " Vi IMproved 9.2 - vimrc file
-" Christian Rickert (2026-06-15)
+" Christian Rickert (2026-06-21)
 
 " Plugins
 " Use VIM settings exclusively
@@ -36,6 +36,8 @@ let g:ale_linters={
 Plug 'dense-analysis/ale'
 
 " Gutentags
+g:gutentags_enabled = 1
+g:gutentags_generate_on_write = 1
 Plug 'ludovicchabant/vim-gutentags'
 
 " A collection of language packs for Vim.
