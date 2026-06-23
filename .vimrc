@@ -36,8 +36,8 @@ let g:ale_linters={
 Plug 'dense-analysis/ale'
 
 " Gutentags
-g:gutentags_enabled = 1
-g:gutentags_generate_on_write = 1
+let g:gutentags_enabled = 1
+let g:gutentags_generate_on_write = 1
 Plug 'ludovicchabant/vim-gutentags'
 
 " A collection of language packs for Vim.
